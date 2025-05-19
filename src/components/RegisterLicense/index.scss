@@ -1,0 +1,80 @@
+.register-license-dialog {
+  display: flex;
+  width: 100%;
+
+  .dialog-header {
+    border-bottom: 1px solid lightgray;
+  }
+
+  .dialog-content {
+    margin-top: 10px;
+
+    .description, label {
+      font-size: 0.8rem;
+      color: rgb(53, 52, 52);
+    }
+
+    .license-inputs {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+
+    .email-input {
+      width: 100%;
+      font-size: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 5px 10px;
+    }
+
+    .license-part-input {
+      width: 24%;
+      text-align: center;
+      font-size: 0.8rem;
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+
+      &:focus {
+        outline: none;
+        box-shadow: none;
+        border-color: #009688; // Optional custom focus style
+      }
+    }
+  }
+
+  .actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 25px;
+
+    button {
+      padding: 5px 12px;
+      font-size: 0.8rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:first-of-type {
+        background-color: white;
+        border: 1px solid lightgray;
+
+        &:hover {
+          border-color: rgb(91, 162, 219);
+          color: rgb(91, 162, 219);
+        }
+      }
+
+      &:last-of-type {
+        background-color: rgb(29, 118, 228);
+        color: white;
+
+        &:hover {
+          background-color: rgb(54, 136, 236);
+        }
+      }
+    }
+  }
+}

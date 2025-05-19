@@ -1,0 +1,292 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--primary-700-main, #004c40);
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+  width: 100%;
+  height: 50px;
+  .icons {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+    margin-right: 20px;
+  }
+}
+
+.dropdowns {
+  display: flex;
+  align-items: center;
+  background: var(--primary-800, #2a8080);
+  height: 80px;
+  padding: 10px;
+  font-size: 25px;
+  span {
+    cursor: pointer;
+    padding: 20px;
+    color: white;
+  }
+}
+
+.entries {
+  min-width: 30%;
+  width: 70%;
+  font-size: 40px;
+  border-right: 2px solid var(--black-300);
+  min-height: calc(100vh - 130px);
+  overflow: auto;
+
+  &-header {
+    display: flex;
+    align-items: center;
+    background-color: var(--black-100);
+    border: 1px solid var(--black-300);
+    padding: 20px;
+    input {
+      width: 25px;
+      height: 25px;
+      margin-right: 20px;
+      &:checked {
+        background-color: black;
+      }
+    }
+  }
+  .contextContainer {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    .rightClick {
+      z-index: 12;
+      position: fixed;
+      background: rgb(250, 250, 250);
+      border: 1px solid var(--black-300);
+      border-radius: 5px;
+      overflow: hidden;
+      .menuElement {
+        color: #222222;
+        cursor: pointer;
+        padding: 20px;
+        font-size: 20px;
+        &:hover {
+          color: #fff;
+          background: #3f4847;
+        }
+      }
+    }
+  }
+  .boxes {
+    max-height: calc(100vh - 222px);
+    overflow-y: scroll;
+    .item {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      padding: 20px;
+      color: var(--black-500);
+      font-size: 20px;
+      input {
+        width: 25px;
+        height: 25px;
+        margin-right: 20px;
+      }
+      .box {
+        display: flex;
+        flex-direction: column;
+        border: 2px solid var(--black-300);
+        border-radius: 8px;
+        padding: 20px;
+        width: 100%;
+        min-height: 200px;
+      }
+    }
+  }
+  .ant-checkbox-wrapper {
+    margin-right: 20px;
+    box-shadow: 1px 0px 5px 0px var(--black-300);
+    .ant-radio-inner {
+      width: 30px;
+      height: 30px;
+      &::after {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+}
+
+.right-side {
+  flex: 1;
+  .top-space {
+    width: 100%;
+    height: 102px;
+    border-bottom: 1px solid var(--black-300);
+  }
+  .tab-component {
+    padding: 20px;
+    .nav-tabs {
+      border: none;
+    }
+    .buttons {
+      display: flex;
+      padding: 3px;
+      margin-bottom: 20px;
+      .header-button {
+        border: 1px solid var(--black-300);
+        border-radius: 30px;
+        font-size: 25px;
+        margin-right: 20px;
+        padding: 5px 20px 5px 20px;
+        &.active {
+          background-color: var(--primary-700-main, #004c40);
+          color: white;
+        }
+      }
+    }
+    .filter {
+      display: flex;
+      flex-direction: column;
+      .scope {
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 30px;
+        span {
+          margin-right: 20px;
+        }
+        .filter-combobox {
+          width: 100px !important;
+          border: 2px solid var(--black-300);
+          border-radius: 5px;
+          position: relative;
+          .ant-select-selection-item {
+            margin: 0px !important;
+          }
+          .ant-select-arrow {
+            right: 0 !important;
+            margin-right: 0 !important;
+          }
+        }
+      }
+      &-content {
+        display: flex;
+        flex-direction: column;
+        background: var(--black-50, #f9f9f9);
+        padding: 30px;
+        .filters {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          .or {
+            background: white;
+            border-radius: 5px;
+            width: 150px !important;
+            height: 50px;
+            border: none !important;
+          }
+        }
+        .add-filter {
+          display: flex;
+          justify-content: center;
+          color: var(--primary-700-main, #004c40);
+          font-weight: 500;
+          margin: 20px;
+        }
+      }
+    }
+    .sorting {
+      display: flex;
+      flex-direction: column;
+      background: var(--black-50, #f9f9f9);
+      padding: 30px;
+      &-select {
+        background: white;
+        border-radius: 5px;
+        width: 100px !important;
+        height: 60px;
+        border: none !important;
+        font-size: 20px !important;
+      }
+      .add-option {
+        display: flex;
+        justify-content: center;
+        color: var(--primary-700-main, #004c40);
+        font-weight: 500;
+        margin: 20px;
+      }
+    }
+
+    .value {
+      display: flex;
+      flex-direction: column;
+      background: var(--black-50, #f9f9f9);
+      padding: 30px;
+
+      .apply-single {
+        background-color: white;
+        border-radius: 5px;
+        border: 0;
+        color: black;
+        font-size: 24px;
+        font-weight: 400;
+        width: 200px;
+        height: 50px;
+      }
+      .apply-filtered {
+        background-color: var(--primary-700-main, #004c40);
+        border-radius: 5px;
+        border: 0;
+        color: white;
+        font-size: 24px;
+        font-weight: 400;
+        width: 200px;
+        height: 50px;
+      }
+      .editor {
+        background-color: white;
+        height: 150px;
+        width: 100%;
+        padding-top: 10px;
+        padding-left: 20px;
+        border-radius: 5px;
+        margin-top: 10px;
+      }
+    }
+    .header-tab {
+      display: flex;
+      flex-direction: column;
+      background: var(--black-50, #f9f9f9);
+      padding: 30px;
+      
+      .code-snippet {
+        display: flex;
+        background: var(--white, #ffffff);
+        border: 1px solid var(--black-200, #ececec);
+        border-radius: 4px;
+        .sidebar {
+          display: flex;
+          flex-direction: column;
+          background: var(--black-100, #f4f4f4);
+          border: 1px solid var(--black-200, #ececec);
+          color: var(--black-400, #bababa);
+          text-align: left;
+          font-size: 20px;
+          font-family: "Inter-SemiBold", sans-serif;
+          padding: 30px;
+        }
+        .code {
+          display: flex;
+          flex-direction: column;
+          padding: 30px;
+          flex: 1;
+          position: relative;
+        }
+      }
+    }
+  }
+}
+
